@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- <ul class="collection" style="width: 40%;margin: 80px auto;">
+  <li class="collection-item avatar">
+    <span class="title">{{user.first_name}} {{user.last_name}}</span>
+    <p>
+      {{user.email}}<br />
+      {{user.patient.address}}<br />
+      {{user.patient.contact}}
+    </p>
+  </li>
+  <a
+    class="waves-effect waves-light btn-small red"
+    href="{%url 'account:patient_logout'%}"
+    >Logout</a
+  >
+  <a
+    class="waves-effect waves-light btn-small green"
+    href="{%url 'doctor:index'%}"
+     >Homepage</a>
+</ul> -->
+
+<section class="feature_part single_feature_part">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-4 col-md-4 align-self-center">
+              <div class="single_feature_text ">
+              </div>
+          </div>
+          <div class="col-lg-8 col-md-8">
+              <div class="feature_item">
+                  <div class="row">
+                      <div class="col-lg-6 col-sm-6">
+                              <div class="single_feature_part">
+                                <span></span>
+                                <h4>{{user.first_name}} {{user.last_name}}</h4>
+                                <p>
+                                  {{user.email}}<br />
+                                  {{user.patient.address}}<br />
+                                  {{user.patient.contact}}
+                                </p>
+                             
+                              <a class="waves-effect waves-light btn-small red" href="{%url 'account:patient_logout'%}">
+                              <button type="submit" class="btn btn-primary btn-sm">Logout</button></a>
+                            
+                              <a class="waves-effect waves-light btn-small green" href="{%url 'doctor:index'%}">
+                                <button type="submit" class="btn btn-primary btn-sm">Homepage</button></a>
+                              </div>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock %}
+
